@@ -1,4 +1,4 @@
 export default{
     public:"pk_live_51JzKfrHOqzhgDJFTjGjbYRWTpoSB65AyJDs1NVx23lG5T9pQpMuVXWYKSbO4P2yHQxyos3oLpvVZwkObbI5d0LOk00j8a9ZN3z",
-    secret:"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"
+    secret:"***********************"
 }
