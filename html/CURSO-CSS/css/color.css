@@ -1,0 +1,67 @@
+.colorbyname {
+  background-color: coral;
+  color: rebeccapurple;
+  border: thin solid greenyellow;
+}
+/* SISTEMA HEXADECIMAL 
+0123456789abcdef
+RedGreenBlue (MEDIOS DIGITALES) VS CyanMagentaYellowKey (MEDIOS  IMPRESOS) 
+Colores en HEX van a ser colores de 6 digitos
+FF/66/00
+RED/GREEN/BLUE */
+.coloreshex {
+  background-color: #f60;
+  color: #12ac78;
+  border: thin solid #ff0000;
+}
+/* PRENDIDO 255 APAGADO 0, RGB RED GREN BLUE */
+.coloresrgb {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: thin solid rgb(0, 0, 0);
+}
+/* HUE SATURATION LIGHTNESS (TONO, SATURACION Y LUZ) 
+El primero es HUE (circulo cromatico)
+0->red
+60 -> amarillo
+120 -> verde             
+180 -> cyan
+240 -> blue
+300 -> margenta
+Segundo valor es saturacion
+0% grises
+100% color puro
+el tercer valor es luminosidad
+0% negro
+100% blanco
+
+*/
+
+.coloreshsl {
+  background-color: hsl(0, 100%, 50%);
+  color: hsl(0, 100%, 100%);
+  border: thin solid hsl(300, 100%, 50%);
+}
+/*  transparent (0,0,0,) color transparente
+currentColor: hereda el valor por defecto o asignado de la propiedad color, del ancestro que tenga definida esta propiedad, busca del acenstro mas cercano al mas lejano  */
+.color-transparent-current {
+  background-color: darkmagenta;
+  background-color: transparent;
+  background-color: currentColor;
+}
+.opacity {
+  background-color: orchid;
+  color: navy;
+  border: thick solid black;
+  opacity: 0.5;
+}
+.opacity-30 {
+  opacity: 0.3;
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+.opacity-80 {
+  opacity: 0.8;
+}

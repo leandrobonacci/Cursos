@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es" data-dark>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM EJERCICIOS</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
+  <link rel="stylesheet" href="js/dom/estilos.css">
+
+</head>
+
+<body data-dark>
+  <header class="header">
+    <h1 class="header">Ejercicios del Doom</h1>
+  </header>
+  <button class="panel-btn hamburger hamburger--vortex" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+  <aside class="panel">
+    <nav class="menu">
+      <a href="#seccion 1">Reloj</a>
+      <a href="#seccion 2">Eventos del teclado</a>
+      <a href="#seccion 3">Cuenta regresiva</a>
+      <a href="#seccion 4">Responsive con JavaScript</a>
+      <a href="#seccion 5">Responsive Tester</a>
+      <a href="#seccion 6">Deteccion de dispositivos</a>
+      <a href="#seccion 7">FILTROS</a>
+      <a href="#seccion 8">Video inteligente</a>
+      <a href="#seccion 9">Validación de formularios</a>
+      <a href="#seccion 10">Seccion 10</a>
+    </nav>
+  </aside>
+  <main>
+    <section id="seccion 1" class="section">
+      <h2>RELOJ DIGITAL Y ALARMA</h2>
+      <div id="reloj"></div>
+      <button id="activar-reloj">Iniciar Reloj</button>
+      <button id="desactivar-reloj">Detener Reloj</button>
+      <button id="activar-alarma">Iniciar Alarma</button>
+      <button id="desactivar-alarma">Detener Alarma</button>
+
+    </section>
+    <section id="seccion 2" class="section">
+      <h2>EVENTO DEL TECLADO</h2>
+      <article class="stage">
+        <div class="ball">
+
+        </div>
+      </article>
+    </section>
+    <section id="seccion 3" class="section">
+      <h2>Cuenta atras - count down -</h2>
+      <div id="countdown"></div>
+    </section>
+    <section id="seccion 4" class="section">
+      <h2>Responsive con JavaScript</h2>
+      <div id="youtube"> </div>
+      <div id="gmaps"> </div>
+    </section>
+    <section id="seccion 5" class="section">
+      <h2>Responsive Tester</h2>
+      <form id="responsive-tester">
+        <input name="direccion" type="url" placeholder="URL" required>
+        <br>
+        <input name="ancho" type="text" placeholder="ANCHO" required>
+        <br>
+        <input name="alto" type="text" placeholder="ALTO" required>
+        <br>
+        <br>
+
+        <input name="probar" type="submit" value="Probar">
+        <input name="cerrar" type="button" value="Cerrar">
+      </form>
+    </section>
+    <section id="seccion 6" class="section" data-scroll-spy>
+      <h2>Deteccion de dispositivos <br>
+        User Agent</h2>
+      <div id="user-device"></div>
+    </section>
+    <section id="seccion 7" class="section" data-scroll-spy>
+      <h2>Filtros de Búsquedas</h2>
+      <input type="search" placeholder="Buscar..." class="card-filter">
+      <article class="cards">
+        <figure class="card">
+          <img src="https://placeimg.com/200/200/nature" alt="Nature">
+          <figcaption>Nature</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="https://placeimg.com/200/200/any" alt="Any">
+          <figcaption>Any</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="https://placeimg.com/200/200/tech" alt="Tech">
+          <figcaption>Tech</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="https://placeimg.com/200/200/animals" alt="Animals">
+          <figcaption>Animals</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="https://placeimg.com/200/200/people" alt="People">
+          <figcaption>People</figcaption>
+        </figure>
+        <figure class="card">
+          <img src="https://placeimg.com/200/200/arch" alt="Architecture">
+          <figcaption>Architecture</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section id="seccion 8" class="section" data-scroll-spy>
+      <h2>Video inteligente</h2>
+      <video src="assets/greenfits.mp4" muted controls loop data-smart-video></video>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <video src="assets/greenfits.mp4" muted controls loop data-smart-video></video>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </section>
+    <section id="seccion 9" class="section" data-scroll-spy>
+      <h2>Validación de formularios</h2>
+      <form  class="contact-form" action="https://formsubmit.co/bonacci.leandro@gmail.com" method="POST" target="_blank">
+        <legend>Envianos tus comentarios</legend>
+        <input type="text" name="name" placeholder="Escribe tu nombre"
+          title="Nombre sólo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+        <br>
+        <input type="email" name="email" placeholder="Escribe tu mail" title="Ingresa un email válido"
+          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+        <br>
+        <input type="text" name="asunto" placeholder="Escribe el asunto" title="Ingrese asunto" required>
+        <br>
+        <textarea name="comentario" cols="50" rows="5" placeholder="Escribe el comentario"
+          title="Tu comentario no debe exceder los 255 caracteres" data-pattern="^.{1,255}$" required></textarea>
+        <br>
+        <input type="submit" value="Enviar">
+        <div class="contact-form-loader none">
+          <img src="assets/circles.svg" alt="Cargando">
+        </div>
+        <div class="contact-form-response none">
+          <p>Los datos han sido enviados</p>
+        </div>
+      </form>
+    </section>
+    <section id="seccion 10" class="section" data-scroll-spy>
+      <h2>Sección 10</h2>
+    </section>
+
+  </main>
+  <button class="scroll-top-btn hidden">&#11014;</button>
+  <button class="dark-theme-btn">🌙</button>
+  <script type="module" src="index-dom.js"></script>
+</body>
+
+</html>

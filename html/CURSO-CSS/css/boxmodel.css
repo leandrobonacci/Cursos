@@ -1,0 +1,182 @@
+/* MODELO DE CAJA
+DEVELOPER MOZILLA EL_MODELO_DE_CAJA
+ES LA FORMA EN QUE LA FORMA QUE CSS VE A LOS ELEMENTOS HTML Y ¿COMO LOS VE? como si fueran cajas con las siguientes
+propiedades:
+1. El contenido (content) : EL contenido (texto) del elemento HTML
+2. El borde (border): Lo que delimita cada uno de los elementos HTML
+3. El relleno (padding): son las distancias internas (la distancia del borde al contenido)
+4. Margen (margin) son las distancias externas (la distancia entre el elemento html y sus elementos hermanos o padres TODO LO DE AFUERA)
+Dentro de un modelo de caja hay que considerar los 4 lados
+1. Arriba (top)
+2. Derecha (right)
+3. Abajo (bottom)
+4. Izquierda (left)*/
+h1 {
+  border-style: solid;
+  text-align: center;
+  background-color: steelblue;
+  font-weight: bold;
+  color: black;
+  width: 400px;
+  height: 200px;
+  align-items: center;
+  border-width: thin;
+}
+.caja1 {
+  border-style: solid;
+  padding: 2%;
+  background-color: steelblue;
+  padding: 2%;
+  margin: 2%;
+  text-align: center;
+}
+.caja2 {
+  border: dashed;
+  border-color: red;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  text-align: center;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+/*  CAJA DE LINEA>
+-OCUPAN ESPACIO NECESARIO
+-NO TIENEN DIMENSIONES MODIFICABLES (ALTO,ANCHO)
+PERMITEN OTROS ELEMENTOS A SU LADO.
+-PADDING Y MARGINSOLO EMPUJAN A ELEMENTOS ADYACENTES EN HORIZONTAL, NUNCA EN VERTICAL
+CAJA DE BLOQUE
+-OCUPAN TODO EL ANCHO DISPONIBLE
+-TIENEN DIMENSIONES MODIFICABLES (ALTO ANCHO)
+-NO PERMITEN OTROS ELEMENTOS A SU LADO (AUNQUE ESPECIFIQUE UN ANCHO, SIGUE OCUPANDO TODO EL ESPACIO DISPONIBLE) */
+
+.caja-linea,
+.caja-bloque {
+  background-color: darkcyan;
+  width: 500px;
+  height: 250px;
+  padding: 16px;
+  border: thin solid black;
+}
+.caja-linea {
+  margin: 48px;
+  display: block;
+}
+.caja-bloque {
+  margin: 32px;
+  display: inline;
+}
+/* PROPIEDAD DISPLAY
+ inline
+ block
+ inlineblock - empieza a aceptar las modificaciones de alto y ancho
+ none
+ table
+ list-item
+ flex VER FLEX
+ grid VER GRID
+ */
+.caja-none {
+  background-color: darkolivegreen;
+  color: white;
+  padding: 16px;
+}
+.caja-linea-bloque {
+  background-color: steelblue;
+  padding: 16px;
+  color: black;
+  display: inline-block;
+  width: 600px;
+  height: 300px;
+  border: solid;
+  border: red dashed;
+}
+.caja-none {
+  display: none;
+}
+.caja-hidden {
+  background-color: steelblue;
+  padding: 16px;
+  color: black;
+  display: inline-block;
+  width: 600px;
+  height: 300px;
+  border: solid;
+  border: red dashed;
+  visibility: hidden;
+}
+.overflow {
+  background-color: steelblue;
+  color: black;
+  width: 200px;
+  height: 100px;
+  overflow: auto;
+  overflow: hidden;
+  overflow: scroll;
+}
+.box-sizing-border,
+.box-sizing-content {
+  background-color: deepskyblue;
+  box-sizing: content-box;
+  width: 500px;
+  height: 250px;
+  padding: 10px;
+  border: thick solid black;
+}
+.box-sizing-border {
+  box-sizing: border-box;
+}
+.container-columna3 {
+  background-color: steelblue;
+  width: 600px;
+  height: 300px;
+  margin-top: 20px;
+}
+
+.container-columna3 > * {
+  width: 200px;
+  border: thin solid red;
+  float: left;
+  box-sizing: border-box;
+}
+/* resetear cajas */
+*,
+*:after {
+  box-sizing: inherit;
+}
+.container-float {
+  background-color: steelblue;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.float-center {
+  clear: both;
+}
+
+.margin-collapse {
+  background-color: skyblue;
+}
+.margin-collapse section {
+  border: solid black thin;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.margin-collapse span {
+  display: inline-block;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+.sitio-web {
+  font-size: 16px;
+  border: thin solid black;
+  background-color: steelblue;
+  width: 800px;
+  height: 1000px;
+  padding: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}

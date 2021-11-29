@@ -1,0 +1,94 @@
+/* 
+font-family
+font-size
+font-weight
+font-style
+font-variant
+font */
+.font {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  font-variant: small-caps;
+  font-style: italic;
+  line-height: 30px;
+  font: italic small-caps bold 24px / 1.5 monospace;
+}
+/* 
+Formato WOFF o woff2 - web open Font format
+font-display
+auto permite que el navegador utilice el metodo predeterminado.
+block- oculta brevemente el texto hasta que la fuente haya sido descargada por completo
+swap- indica al navegador que utilice la funete alternativa para mostrar el texto hasta que la fuente personalizada se haya cargado por completo
+fallback - es una mezcla de auto y swap
+optional - ocultara el texto, luego lo cargara con la fuente alternativa y finalmente aplicara la fuente personalizada
+ */
+@font-face {
+  font-family: "Chalet";
+  src: url("../assets/chalet1.woff");
+}
+@font-face {
+  font-family: "Chalet2";
+  src: url(../assets/chalet2.woff);
+}
+.chalet {
+  font-family: "chalet", sans-serif;
+}
+.pecita {
+  font-family: "chalet2";
+}
+.raleway {
+  font-family: "Raleway", sans-serif;
+}
+/* text-overflow
+overflow: hidden
+white-space: nowrap */
+.text {
+  background-color: blanchedalmond;
+  border: thin solid black;
+  width: 50%;
+  padding: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: 2rem;
+  text-align: left;
+  text-decoration-color: underline;
+  text-indent: 1rem;
+  text-transform: capitalize;
+  text-transform: uppercase;
+  text-transform: none;
+  letter-spacing: 2px;
+  word-break: keep-all;
+  writing-mode: horizontal-tb;
+  /* writing-mode: vertical-lr; */
+}
+.text a {
+  text-decoration: none;
+}
+.white-space {
+  white-space: pre;
+}
+.material-icons {
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: "liga";
+}

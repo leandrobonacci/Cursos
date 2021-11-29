@@ -1,0 +1,10 @@
+.table {
+  font-size: 3rem;
+}
+
+.table,
+th,
+td {
+  border: thin solid black;
+  border-spacing: 10px;
+}

@@ -1,0 +1,22 @@
+img {
+  width: 100%;
+  height: auto;
+}
+.card {
+  border: medium solid black;
+  width: 400px;
+  width: 400px;
+  text-align: center;
+  background-color: yellow;
+  margin-bottom: 0;
+}
+.card img {
+  height: 300px;
+  object-fit: fill;
+  object-fit: cover;
+  object-position: left top;
+}
+.titulo {
+  background-color: steelblue;
+  border: thick solid black;
+}

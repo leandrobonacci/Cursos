@@ -1,0 +1,105 @@
+/* QUIETITO VOS NO TE ME MOVES */
+.static {
+  background-color: yellow;
+  position: static;
+  top: 10px;
+  left: 10px;
+}
+
+/* EL RELATIVE: EL ELEMENTO CONSERVA SUS DIMENSIONES Y POSICION ORIGINAL EN EL FLUJO DEL DOCUMENTO.
+SI SE MUEVE TOMA COMO REFERENCIA SU POSICION ORIGINAL - por cascada right top left etc va por orden -*/
+.relative {
+  background-color: steelblue;
+  position: relative;
+  width: 300px;
+  height: 50px;
+  bottom: -50px;
+  right: 50px;
+  top: -30px;
+  left: 150px;
+}
+/* pierde sus dimensiones en el flujo del documento, si lo muevo, no se guarda su lugar */
+.absolute {
+  background-color: tomato;
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  /* top: 0;
+  left: 0; */
+  right: 0;
+  bottom: 0;
+}
+/* EL ABSOLUTO SIGUE AL RELATIVO ( PADRE), es decir toma su referencia (RELATIVE) del padre */
+.relative-parent {
+  background-color: khaki;
+  position: relative;
+  width: 600px;
+  height: 50px;
+  left: 50px;
+  top: 50px;
+}
+.absolute-child {
+  background-color: lightcoral;
+  position: absolute;
+  left: 0;
+  top: 0;
+  top: -50px;
+  left: -50px;
+}
+/* SE CLAVA EN LA PANTALLA, PIERDE SU POSICION COMO EL RELATIVE */
+.fixedd {
+  font-size: 30px;
+  height: 200px;
+  width: 200px;
+  background-color: lightcoral;
+  position: fixed;
+}
+/* SE CONGELA EN DONDE VOS LO UBIQUES, TIENE LAS PROPIEDADES DE RELATIVE, NO OCUPA UN LUGAR ESPECIFICO */
+.pegajosa {
+  width: 200px;
+  height: 200px;
+  background-color: lightcoral;
+  position: sticky;
+  top: 100px;
+}
+.sticky-parent {
+  border: thin dashed black;
+  height: 600px;
+}
+.sticky-child {
+  background-color: lightslategrey;
+  position: sticky;
+  top: 75px;
+}
+.z-index-1,
+.z-index-2 {
+  background-color: mediumaquamarine;
+  border: thin solid black;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.z-index-1 {
+  z-index: 0;
+}
+.z-index-2 {
+  top: -200px;
+  left: 100px;
+  z-index: 2;
+}
+.z-index-parent {
+  background-color: mediumaquamarine;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  /* z-index: 1; */
+}
+.z-index-child {
+  background-color: mediumblue;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  top: -75px;
+  left: 75px;
+  z-index: -3;
+}

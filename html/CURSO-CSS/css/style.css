@@ -1,0 +1,263 @@
+/* REGLA CSS CONSTA DE 2 PARTES
+1) SELECTOR
+2) bloque de declaraciones{
+atributo: valor;
+atributo-de-mas-dos-palabras: otro-valor; */
+
+@import url("otra.css");
+
+h1 {
+  color: orangered;
+  background-color: black;
+
+  /*
+ EXISTEN 3 SELECTORES BASICOS
+1) ETIQUETAS - SON ELEMENTOS HTML
+2) IDENTIFICADORES - ATRIBUTO ID - # 
+3) CLASES  - atributo class - .
+ */
+}
+p {
+  color: midnightblue;
+}
+/* ANTI PATRON MALA PRACTICA ID NO SE PUEDE REPETIR*/
+#parrafo2 {
+  background-color: skyblue;
+  text-align: center;
+}
+/* SE PUEDE REUTILIZAR */
+
+.bg-skyblue {
+  background-color: skyblue;
+}
+.bg-steelblue {
+  background-color: steelblue;
+}
+.text-20 {
+  font-size: 20px;
+}
+.text-32 {
+  font-size: 32px;
+}
+.text-white {
+  color: white;
+}
+.text-center {
+  text-align: center;
+}
+.hijos-directos > li {
+  background-color: thistle;
+}
+.hijos-descendientes b {
+  background-color: thistle;
+}
+/* SOLAMENTE A LOS ELEMENTOS HERMANOS QUE ESTEN POR DEBAJO ~ */
+.hermanos-general ~ li {
+  background-color: thistle;
+}
+.hermanos-adyacentes + li {
+  background-color: thistle;
+}
+/* SELECTORES DE ATRIBUTOS */
+.selectores-atributos a[href] {
+  color: orangered;
+}
+.selectores-atributos a[target="_blank"] {
+  font-weight: bold;
+}
+/* APLICA EL ESTILO (EL *) SI CONTIENE LA PALABRA */
+.selectores-atributos a[href*="jonmircha"] {
+  font-size: 24px;
+}
+/* SI EMPIEZA CON LOS SIGUIENTES CARACTERES */
+.selectores-atributos a[href^="https"] {
+  text-decoration: none;
+}
+/* TERMINA CON .COM */
+.selectores-atributos a[href$=".com"] {
+  background-color: black;
+}
+/* VERGA DE LA Ñ aplica si tiene el texto en una lista separada por espacios */
+.selectores-atributos a[class~="cursos"] {
+  background-color: midnightblue;
+}
+/* selector universal */
+* {
+  font-family: sans-serif;
+}
+.selector-universal * {
+  font-size: 34px;
+}
+.form-pseudoclases *:required {
+  border-color: yellow;
+}
+.form-pseudoclases *:valid {
+  border-color: green;
+}
+.form-pseudoclases *:invalid {
+  border-color: red;
+}
+.form-pseudoclases *:disabled {
+  background-color: red;
+}
+.form-pseudoclases *:focus {
+  background-color: pink;
+}
+.menu-pseudoclases a:hover {
+  color: yellow;
+}
+.menu-pseudoclases a:visited {
+  color: red;
+}
+.p-pseudoclases:hover {
+  color: blueviolet;
+  font-size: 24px;
+}
+#selectores-basicos:target {
+  background-color: lightblue;
+}
+/* PRIMERO */
+.lista-pseudoclases li:first-child {
+  color: red;
+}
+/* ULTIMO */
+.lista-pseudoclases li:last-child {
+  color: blue;
+}
+/* TERCER */
+.lista-pseudoclases :nth-child(3) {
+  color: navy;
+}
+/* DE 4 EN 4 */
+.lista-pseudoclases li:nth-child(4n) {
+  font-size: 20px;
+}
+/* de 3 en 3 */
+.lista-pseudoclases li:nth-child(3n + 2) {
+  font-size: 54px;
+}
+/* pares e impares */
+.lista-pseudoclases li:nth-child(even) {
+  color: orangered;
+}
+.lista-pseudoclases li:nth-child(odd) {
+  color: purple;
+}
+.articulo-pseudoclase p:first-of-type {
+  background-color: pink;
+  font-size: 20px;
+}
+.articulo-pseudoclase p:last-of-type {
+  background-color: pink;
+  font-size: 28px;
+}
+.articulo-pseudoclase p:nth-of-type(3) {
+  background-color: fuchsia;
+  font-size: 26px;
+}
+.articulo-pseudoclase *:not(p) {
+  background-color: beige;
+}
+html {
+  scroll-behavior: smooth;
+}
+.saga-geminis::before {
+  content: "(EMOJI)";
+}
+.saga-geminis:after {
+  content: "(EMOJI)";
+}
+.saga-precio::before {
+  content: "$";
+  font-weight: normal;
+}
+.saga-precio::after {
+  content: "USD";
+  font-weight: bold;
+}
+.p-pseudoelementos::first-line {
+  font-size: large;
+  color: coral;
+}
+.p-pseudoelementos::selection {
+  color: green;
+  background-color: black;
+}
+.input-pseudoelementos::placeholder {
+  color: blue;
+}
+/* agrupar selectores */
+.agruparselectores input[type="text"],
+.agruparselectores input[type="email"],
+.agruparselectores textarea {
+  border-color: yellow;
+  background-color: black;
+  border-width: 2px;
+  border-style: dashed;
+  font-size: 20px;
+  display: block;
+  width: 300px;
+}
+
+/* CASCADA, ESPECIFIDAD, HERENCIA */
+/* LA CASCADA ES EL MECANISMO EN EL QUE NAVEGADOR APLICA LOS ESTILOS. TOMA EN CUENTA EL SIGUIENTE ORDEN>
+EL ORIGEN DEL CODIGO
+EL USER AGENT (LOS ESTILOS POR DEFECTOS DEL NAVEGADOR)
+PERSONALIZACIONES DEL USUARIO
+LOS ESTILOS DEL AUTOR
+2 especificidad es el peso que tiene un selector cuando hay conflictos de estilos. Se calcula de la siguiente forma::after
+etiquetas y pseudo elementos 0,0,0,1
+clases atributos y pseudoclases 0,0,1,0
+identificadores 0100
+estilo de linea 1000
+!important VALE MAS ESTE SOBRE TODOS
+3 orden de aparicion
+HERENCIA, CAPACIDAD DE UN SELECTOR DE OBTENER LOS VALORES DE SUS ANCESTROS MAS CERCANOS PARA APLICAR SE USA EL VALOR INHERIT, SI QUERES EVITARLA PODEMOS ASIGNAR OTRO VALOR O INICIALIZAR LA PROPIEDAD EN CUESTION CON EL VALOR INICIAL
+  */
+/* ESPECIFICIDDAD 1,1,1 */
+
+/* ESPECIFICIDDAD 1,1,0 */
+.cita-marco#cita-marco {
+  background-color: cornflowerblue;
+}
+/* ESPECIFICIDDAD 1,0,0 */
+#cita-marco cite {
+  background-color: crimson;
+  color: blue;
+  size: 20px;
+}
+blockquote.cita-marco#cita-marco {
+  background-color: burlywood;
+  background-color: inherit;
+}
+.titulo2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  background-color: steelblue;
+  text-align: center;
+}
+.ul1 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+.ul-index {
+  text-align: center;
+  font-size: 20px;
+  font: bold;
+  color: black;
+}
+.titulo11 {
+  text-align: center;
+  font-size: 30px;
+}
+/* Prefijos de los navegadores
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+            autoprefixer.github.io
+            caniuse.com
+             */

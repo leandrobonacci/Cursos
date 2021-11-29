@@ -1,0 +1,31 @@
+/****************reset css*************/
+:root {
+  --main-font: sans-serif;
+  --font-size: 16px;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.titulo {
+  text-align: center;
+  border: thick;
+  border-radius: 30%;
+  background-color: green;
+}

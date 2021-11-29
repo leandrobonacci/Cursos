@@ -1,0 +1,47 @@
+:root {
+  --default-bg-color: steelblue;
+  --primary-color: red;
+  --font: 32px;
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+.custom-prop-1 {
+  background-color: var(--primary-color);
+}
+.custom-prop-3 {
+  font-size: var(--font, 32px);
+}
+.custom-prop-2 {
+  background-color: var(--default-bg-color);
+  border: thick solid var(--primary-color);
+}
+.prop-tittle {
+  --primary-color: navy;
+  color: var(--primary-color, steelblue);
+  background-color: var(--default-bg-color);
+}
+.ch-10 {
+  --padding-size: 2ch;
+  background-color: var(--default-bg-color);
+  --num-ch: 10ch;
+  font-size: 2rem;
+  padding: var(--padding-size);
+  width: calc(var(--num-ch) + var(--padding-size) * 2);
+}
+.min-max {
+  background-color: var(--default-bg-color);
+  font-size: var(--font);
+  margin-top: 1rem;
+  width: min(300px, 20vw);
+  height: max(200px, 25vh);
+}
+/* MINIMO, NORMAL, MAXIMO */
+h1 {
+  font-size: clamp(2rem, 1rem + 3vw, 3rem);
+}
