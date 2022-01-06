@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de usuario basada en estado</title>
+</head>
+<script src="component.js""></script>
+<body>
+    <h1>Libreria de componentes con estado</h1>
+<form id="todo-form">
+    <input type="text" id="todo-item" placeholder="Tarea por hacer">
+    <input type="submit" value="Agregar">
+</form>
+<h2>Lista de tareas</h2>
+<ul id="todo-list"></ul>
+    <script>
+const d = document,
+$item = d.getElementById("todo-item");
+const app = new component({
+    el: "#todo-list",
+    data: {
+        todoList: []
+    },
+    template: function (props){
+        if(props.todoList.length<1){
+        return `<p> <em> Lista sin tareas </p></em>`;
+    }
+    let todos = props.todoList.map(item =>`<li> ${item}</li>`).join("");
+    return todos;
+    }
+})
+
+//render UI
+const render = ()=>{
+    console.log(template.data);
+
+}
+d.addEventListener("DOMContentLoaded", app);
+
+app.setState({
+    todoList:["tarea 1", "tarea 2", "tarea 3"]
+})
+
+d.addEventListener("submit", e=>{
+    if(!e.target.matches("#todo-form")) return false;
+    e.preventDefault();
+const $item = d.getElementById("todo-item");
+if(!$item) return;
+
+//actualizamos el estado de forma reactiva
+const lastState = app.getState();
+lastState.todoList.push($item.value);
+app.setState({ todoList: lastState.todoList});
+
+
+    //limpiar input
+    $item.value = "";
+    $item.focus();
+})
+    </script>
+    
+</body>
+</html>
